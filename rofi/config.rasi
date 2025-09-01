@@ -13,12 +13,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "NotoSansM Nerd Font 10";
-    background:                  #1a1111;
-    background-alt:              #413737;
-    foreground:                  #f0dede;
-    selected:                    #733337;
-    active:                      #5d3f40;
-    urgent:                      #5b421a;
+    background:                  #0f1417;
+    background-alt:              #353a3d;
+    foreground:                  #dfe3e7;
+    selected:                    #004c69;
+    active:                      #374955;
+    urgent:                      #494264;
 }
 
 /*****----- Main Window -----*****/
@@ -52,7 +52,7 @@ imagebox {
     padding:                     20px;
     background-color:            transparent;
     border-radius:               10px;
-    background-image:            url("/home/kv/Wallpapers/satoru-gojo-jujutsu-3840x2160-9290.jpg", height);
+    background-image:            url("/home/kv/Wallpapers/2RZyIHHZ-fond-decran-Chretien-114.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
