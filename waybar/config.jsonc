@@ -10,9 +10,10 @@
 		"format-icons": {
 			"1": "",
 			"2": "",
+			"3": "",
 		},
 		"persistent-workspaces": {
-			"*": 2,
+			"*": 3,
 		},
 	},
 	"network": {
