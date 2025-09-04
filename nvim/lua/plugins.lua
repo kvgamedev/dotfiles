@@ -15,10 +15,8 @@ vim.pack.add({
 	"https://github.com/stevearc/conform.nvim",
 })
 
--- Colorscheme
 require("catppuccin").setup({ transparent_background = true })
 vim.cmd("colorscheme catppuccin")
-
 --- @diagnostic disable-next-line:undefined-field
 require("lualine").setup()
 
