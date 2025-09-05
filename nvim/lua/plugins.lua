@@ -12,7 +12,7 @@ vim.pack.add({
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 	{ src = "https://github.com/Saghen/blink.cmp", version = vim.version.range("*") },
 	"https://github.com/stevearc/conform.nvim",
-})
+}, { load = false })
 
 require("catppuccin").setup({ transparent_background = true })
 vim.cmd("colorscheme catppuccin")
