@@ -5,7 +5,6 @@ end
 vim.pack.add({
 	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
 	"https://github.com/nvim-mini/mini.nvim",
-	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
 	"https://github.com/folke/flash.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
@@ -17,19 +16,19 @@ vim.pack.add({
 
 require("catppuccin").setup({ transparent_background = true })
 vim.cmd("colorscheme catppuccin")
---- @diagnostic disable-next-line:undefined-field
-require("lualine").setup()
 
 local files = require("mini.files")
 local picker = require("mini.pick")
 local icons = require("mini.icons")
 local hipatterns = require("mini.hipatterns")
 local extras = require("mini.extra")
+require("mini.starter").setup()
 files.setup({ windows = { preview = true } })
 picker.setup()
 vim.ui.select = picker.ui_select
 icons.setup()
 icons.mock_nvim_web_devicons()
+require("mini.statusline").setup()
 require("mini.ai").setup()
 require("mini.align").setup()
 require("mini.comment").setup()
