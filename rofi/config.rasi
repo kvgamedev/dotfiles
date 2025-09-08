@@ -13,12 +13,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "NotoSansM Nerd Font 10";
-    background:                  #0f1417;
-    background-alt:              #353a3d;
-    foreground:                  #dfe3e7;
-    selected:                    #004c69;
-    active:                      #374955;
-    urgent:                      #494264;
+    background:                  #121318;
+    background-alt:              #38393f;
+    foreground:                  #e3e2e9;
+    selected:                    #314578;
+    active:                      #404659;
+    urgent:                      #5a3d59;
 }
 
 /*****----- Main Window -----*****/
@@ -52,7 +52,7 @@ imagebox {
     padding:                     20px;
     background-color:            transparent;
     border-radius:               10px;
-    background-image:            url("/home/kv/Wallpapers/2RZyIHHZ-fond-decran-Chretien-114.png", height);
+    background-image:            url("/home/kv/Wallpapers/landscape-rocks-3840x2160-11016.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
