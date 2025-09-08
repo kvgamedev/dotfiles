@@ -17,17 +17,12 @@ vim.pack.add({
 require("catppuccin").setup({ transparent_background = true })
 vim.cmd("colorscheme catppuccin")
 
-local files = require("mini.files")
-local picker = require("mini.pick")
-local icons = require("mini.icons")
-local hipatterns = require("mini.hipatterns")
-local extras = require("mini.extra")
 require("mini.starter").setup()
-files.setup({ windows = { preview = true } })
-picker.setup()
-vim.ui.select = picker.ui_select
-icons.setup()
-icons.mock_nvim_web_devicons()
+require("mini.files").setup({ windows = { preview = true } })
+require("mini.pick").setup()
+vim.ui.select = MiniPick.ui_select
+require("mini.icons").setup()
+MiniIcons.mock_nvim_web_devicons()
 require("mini.statusline").setup()
 require("mini.ai").setup()
 require("mini.align").setup()
@@ -44,35 +39,32 @@ require("mini.diff").setup({
 		signs = { add = "▏", change = "▏", delete = "▏" },
 	},
 })
-extras.setup()
+require("mini.extra").setup()
 
 map("n", "<leader>s", "<Nop>", "Search")
-map("n", "<leader>e", files.open, "Explorer")
-map("n", "<leader>f", picker.builtin.files, "Files")
-map("n", "<leader>/", picker.builtin.grep_live, "Grep")
-map("n", "<leader>r", picker.builtin.resume, "Resume")
-map("n", "<leader>sH", picker.builtin.help, "Help")
-map("n", "<leader>s/", extras.pickers.buf_lines, "Grep Buffer")
-map("n", "<leader>sc", extras.pickers.commands, "Commands")
-map("n", "<leader>sd", extras.pickers.diagnostic, "Diagnostics")
-map("n", "<leader>sh", extras.pickers.history, "Command History")
-map("n", "<leader>sk", extras.pickers.keymaps, "Keymaps")
-map("n", "<leader>so", extras.pickers.options, "Options")
-map("n", "<leader>sf", extras.pickers.oldfiles, "OldFiles")
+map("n", "<leader>e", MiniFiles.open, "Explorer")
+map("n", "<leader>f", MiniPick.builtin.files, "Files")
+map("n", "<leader>/", MiniPick.builtin.grep_live, "Grep")
+map("n", "<leader>r", MiniPick.builtin.resume, "Resume")
+map("n", "<leader>sH", MiniPick.builtin.help, "Help")
+map("n", "<leader>s/", MiniExtra.pickers.buf_lines, "Grep Buffer")
+map("n", "<leader>sc", MiniExtra.pickers.commands, "Commands")
+map("n", "<leader>sd", MiniExtra.pickers.diagnostic, "Diagnostics")
+map("n", "<leader>sh", MiniExtra.pickers.history, "Command History")
+map("n", "<leader>sk", MiniExtra.pickers.keymaps, "Keymaps")
+map("n", "<leader>so", MiniExtra.pickers.options, "Options")
+map("n", "<leader>sf", MiniExtra.pickers.oldfiles, "OldFiles")
 
 map({ "n", "x", "o" }, "<return>", require("flash").jump, "Flash")
 map({ "n", "x", "o" }, "<s-return>", require("flash").treesitter, "Flash Treesitter")
-map({ "o" }, "r", require("flash").remote, "Remote Flash")
-map({ "x", "o" }, "R", require("flash").treesitter_search, "Treesitter Search")
-map({ "c" }, "<c-s>", require("flash").toggle, "Toggle Flash Search")
 
-hipatterns.setup({
+require("mini.hipatterns").setup({
 	highlighters = {
 		fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
 		hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
 		todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
 		note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-		hex_color = hipatterns.gen_highlighter.hex_color(),
+		hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
 	},
 })
 
