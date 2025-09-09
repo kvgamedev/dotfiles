@@ -13,12 +13,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "NotoSansM Nerd Font 10";
-    background:                  #121318;
-    background-alt:              #38393f;
-    foreground:                  #e3e2e9;
-    selected:                    #314578;
-    active:                      #404659;
-    urgent:                      #5a3d59;
+    background:                  #111318;
+    background-alt:              #37393e;
+    foreground:                  #e2e2e9;
+    selected:                    #2b4678;
+    active:                      #3f4759;
+    urgent:                      #583e5b;
 }
 
 /*****----- Main Window -----*****/
@@ -52,7 +52,7 @@ imagebox {
     padding:                     20px;
     background-color:            transparent;
     border-radius:               10px;
-    background-image:            url("/home/kv/Wallpapers/landscape-rocks-3840x2160-11016.jpg", height);
+    background-image:            url("catppuccin-1.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

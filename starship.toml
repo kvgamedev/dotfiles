@@ -104,12 +104,12 @@ commands = [
 
 [character]
 format = "$symbol "
-success_symbol = "[❯](bold #b2c5ff)"
+success_symbol = "[❯](bold #aec6ff)"
 error_symbol = "[❯](bold #ffb4ab)"
-vimcmd_symbol = "[❮](bold #b2c5ff)"
-vimcmd_visual_symbol = "[❮](bold #b2c5ff)"
-vimcmd_replace_symbol = "[❮](bold #b2c5ff)"
-vimcmd_replace_one_symbol = "[❮](bold #b2c5ff)"
+vimcmd_symbol = "[❮](bold #aec6ff)"
+vimcmd_visual_symbol = "[❮](bold #aec6ff)"
+vimcmd_replace_symbol = "[❮](bold #aec6ff)"
+vimcmd_replace_one_symbol = "[❮](bold #aec6ff)"
 disabled = false
 
 [cmake]
@@ -128,7 +128,7 @@ detect_folders = []
 [cmd_duration]
 min_time = 2000
 format = "took [$duration]($style) "
-style = "#b2c5ff bold"
+style = "#aec6ff bold"
 show_milliseconds = false
 disabled = false
 show_notifications = false
@@ -257,7 +257,7 @@ fish_style_pwd_dir_length = 0
 use_logical_path = true
 format = "[$path]($style)[$read_only]($read_only_style) "
 repo_root_format = "[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
-style = "#b2c5ff bold"
+style = "#aec6ff bold"
 disabled = false
 read_only = "🔒"
 read_only_style = "red"
@@ -400,7 +400,7 @@ detect_env_vars = []
 [git_branch]
 format = "on [$symbol$branch(:$remote_branch)]($style) "
 symbol = " "
-style = "bold #e1bbdc"
+style = "bold #debcdf"
 truncation_length = 9223372036854775807
 truncation_symbol = "…"
 only_attached = false
