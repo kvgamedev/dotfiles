@@ -13,12 +13,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "NotoSansM Nerd Font 10";
-    background:                  #111318;
-    background-alt:              #37393e;
-    foreground:                  #e2e2e9;
-    selected:                    #2b4678;
-    active:                      #3f4759;
-    urgent:                      #583e5b;
+    background:                  #0f1416;
+    background-alt:              #343a3c;
+    foreground:                  #dee3e6;
+    selected:                    #004e5d;
+    active:                      #344a51;
+    urgent:                      #404565;
 }
 
 /*****----- Main Window -----*****/
@@ -52,7 +52,7 @@ imagebox {
     padding:                     20px;
     background-color:            transparent;
     border-radius:               10px;
-    background-image:            url("catppuccin-1.jpg", height);
+    background-image:            url("/home/kv/Wallpapers/geometric-abstract-3840x2160-23187.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
