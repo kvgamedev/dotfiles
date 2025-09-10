@@ -24,7 +24,6 @@ grim
 gst-plugin-pipewire
 gtk4-layer-shell
 hyprland
-imagemagick
 iwd
 kanata-bin
 kitty
@@ -39,7 +38,6 @@ man-db
 matugen-bin
 nano
 neovim-nightly-bin
-network-manager-applet
 networkmanager
 noto-fonts-emoji
 nvidia-open-dkms
@@ -64,7 +62,6 @@ ttf-noto-nerd
 uwsm
 vim
 waybar
-wev
 wget
 wireless_tools
 wireplumber
