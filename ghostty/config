@@ -13,6 +13,13 @@ window-padding-y = 12
 keybind = alt+space>n=new_tab
 keybind = alt+space>x=close_surface
 
+keybind = alt+space>w>v=new_split:right
+keybind = alt+space>w>s=new_split:down
+keybind = alt+space>w>k=goto_split:up
+keybind = alt+space>w>j=goto_split:down
+keybind = alt+space>w>h=goto_split:left
+keybind = alt+space>w>l=goto_split:right
+
 keybind = alt+space>l=next_tab
 keybind = alt+space>h=previous_tab
 
