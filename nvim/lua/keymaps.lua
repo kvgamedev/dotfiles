@@ -1,17 +1,9 @@
-local map = function(mode, key, command, description)
-	vim.keymap.set(mode, key, command, { desc = description })
-end
-
--- map({ "n" }, "<leader>w", "<c-w>", "Window" ) -- this or using proxy in which-key
-map({ "n", "v", "o" }, "<A-l>", "G", "Last Line" )
-map({ "n", "v", "o" }, "<A-h>", "gg", "First Line" )
-map({ "n", "v", "o" }, "<S-l>", "$", "Last Character" )
-map({ "n", "v", "o" }, "<S-h>", "0", "First Character" )
-
-map({ "n", "v", "o" }, "<c-d>", "<c-d>zz", "Jump Down Half Page and Recenter cursor" )
-map({ "n", "v", "o" }, "<c-u>", "<c-u>zz", "Jump Up Half Page and Recenter cursor" )
-map({ "n", "v", "o" }, "n", "nzz", "Next Match and Recenter" )
-map({ "n", "v", "o" }, "N", "Nzz", "Previous Match and Recenter" )
-
-map("n", "<Esc>", vim.cmd.nohlsearch, "Remove Search Highlights" )
-map("n", "<leader>x", function() vim.api.nvim_buf_delete(0, { force = true }) end, "Delete Buffer")
+local map = vim.keymap.set
+map({ "n", "v", "o" }, "<a-h>", "0", { desc = "Jump to Beginning of line" })
+map({ "n", "v", "o" }, "<a-l>", "$", { desc = "Jump to End of Line" })
+map({ "n", "v", "o" }, "<a-j>", "G", { desc = "Jump to Bottom" })
+map({ "n", "v", "o" }, "<a-k>", "gg", { desc = "Jump to Top" })
+map("n", "<esc>", vim.cmd.nohlsearch, { desc = "Hide Search Highlight" })
+map("n", "<leader>x", function()
+	vim.api.nvim_buf_delete(0, { force = true })
+end, { desc = "Delete Buffer" })
