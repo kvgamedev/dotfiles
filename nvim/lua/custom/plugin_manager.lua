@@ -40,9 +40,7 @@ H.lazy_load = function(callback, event)
 			pattern = "*",
 			once = true,
 			group = gr,
-			callback = function()
-				vim.defer_fn(callback, 0)
-			end,
+			callback = callback,
 		})
 		return
 	end
