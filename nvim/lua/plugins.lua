@@ -1,5 +1,5 @@
 vim.pack.add({
-	"https://github.com/kvgamedev/kvim.nvim"
+	"https://github.com/kvgamedev/kvim.nvim",
 })
 require("kvim.plug").setup()
 
@@ -87,9 +87,8 @@ P.add({
 	event = "InsertEnter",
 	config = function()
 		require("blink.cmp").setup({
-			sources = {
-				default = { "lsp", "path", "buffer", "snippets" },
-			},
+			sources = { default = { "lsp", "path", "snippets", "buffer" } },
+			completion = { documentation = { auto_show = true } },
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		})
 	end,
@@ -135,7 +134,9 @@ P.add({
 	lazy = true,
 	config = function()
 		require("kvim.term").setup()
-		map("n", "<c-w>g", function() KTerm.run_cmd("lazygit") end, { desc = "LazyGit" })
+		map("n", "<c-w>g", function()
+			KTerm.run_cmd("lazygit")
+		end, { desc = "LazyGit" })
 		map("n", "<c-w>t", KTerm.terminal, { desc = "Terminal" })
 		map("n", "<leader>w", "<c-w>", { desc = "Window", remap = true })
 	end,

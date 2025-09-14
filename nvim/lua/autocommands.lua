@@ -11,6 +11,7 @@ end
 au("TextYankPost", "*", false, function()
 	vim.hl.on_yank()
 end)
+
 au("LspAttach", "*", true, function()
 	vim.keymap.set("n", "gl", "<Nop>", { desc = "LSP" })
 	vim.keymap.set("n", "gld", vim.lsp.buf.definition, { desc = "Goto Definition" })
