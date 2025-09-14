@@ -19,7 +19,6 @@ P.add({
 				signs = { add = "▏", change = "▏", delete = "▏" },
 			},
 		})
-		require("mini.git").setup()
 		require("mini.notify").setup()
 		require("mini.extra").setup()
 		require("mini.hipatterns").setup({
@@ -80,6 +79,7 @@ P.add({
 	src = "Saghen/blink.cmp",
 	version = vim.version.range("*"),
 	lazy = true,
+	event = "InsertEnter",
 	config = function()
 		require("blink.cmp").setup({
 			sources = {
