@@ -1,4 +1,9 @@
-local P = require("custom.plugin_manager")
+vim.pack.add({
+	"https://github.com/kvgamedev/kvim.nvim"
+})
+require("kvim.plug").setup()
+
+local P = KPlug
 local map = vim.keymap.set
 
 P.add({
@@ -126,10 +131,12 @@ P.add({
 })
 
 P.add({
-	src = "kvgamedev/term.nvim",
+	src = "kvgamedev/kvim.nvim",
+	lazy = true,
 	config = function()
 		require("kvim.term").setup()
-		map("n", "<c-w>g", function() Term.run_cmd("lazygit") end, { desc = "LazyGit" })
-		map("n", "<c-w>t", Term.terminal, { desc = "Terminal" })
+		map("n", "<c-w>g", function() KTerm.run_cmd("lazygit") end, { desc = "LazyGit" })
+		map("n", "<c-w>t", KTerm.terminal, { desc = "Terminal" })
+		map("n", "<leader>w", "<c-w>", { desc = "Window", remap = true })
 	end,
 })
