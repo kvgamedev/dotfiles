@@ -124,3 +124,12 @@ P.add({
 		vim.cmd("colorscheme catppuccin")
 	end,
 })
+
+P.add({
+	src = "kvgamedev/term.nvim",
+	config = function()
+		require("kvim.term").setup()
+		map("n", "<c-w>g", function() Term.run_cmd("lazygit") end, { desc = "LazyGit" })
+		map("n", "<c-w>t", Term.terminal, { desc = "Terminal" })
+	end,
+})

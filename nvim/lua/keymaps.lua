@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+map("n", "<leader>w", "<c-w>", { desc = "Window" })
 map({ "n", "v", "o" }, "<a-h>", "0", { desc = "Jump to Beginning of line" })
 map({ "n", "v", "o" }, "<a-l>", "$", { desc = "Jump to End of Line" })
 map({ "n", "v", "o" }, "<a-j>", "G", { desc = "Jump to Bottom" })
