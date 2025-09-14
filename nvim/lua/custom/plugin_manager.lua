@@ -4,9 +4,15 @@ local gr = vim.api.nvim_create_augroup("LazyLoad", { clear = true })
 
 M.add = function(opts)
 	if opts.lazy then
-		H.lazy_load(function()
-			H.add_plugin(opts)
-		end)
+		if opts.event then
+			H.lazy_load(function()
+				H.add_plugin(opts)
+			end, opts.event)
+		else
+			H.lazy_load(function()
+				H.add_plugin(opts)
+			end)
+		end
 		return
 	end
 	H.add_plugin(opts)
