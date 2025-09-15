@@ -23,6 +23,7 @@ git
 grim
 gst-plugin-pipewire
 gtk4-layer-shell
+htop
 hyprland
 iwd
 kanata-bin
@@ -38,6 +39,7 @@ man-db
 matugen-bin
 nano
 neovim-nightly-bin
+network-manager-applet
 networkmanager
 noto-fonts-emoji
 nvidia-open-dkms
@@ -69,6 +71,8 @@ xdg-desktop-portal-hyprland
 xdg-utils
 xorg-server
 xorg-xinit
+yay
+yay-debug
 yazi
 zig
 zls
