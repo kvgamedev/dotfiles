@@ -35,7 +35,7 @@ P.add({
 			},
 		})
 
-		map("n", "<leader>e", MiniFiles.open, { desc = "Search" })
+		map("n", "<leader>e", MiniFiles.open, { desc = "Explorer" })
 		map("n", "<leader>s", "<Nop>", { desc = "Search" })
 		map("n", "<leader>f", MiniPick.builtin.files, { desc = "Files" })
 		map("n", "<leader>g", MiniPick.builtin.grep_live, { desc = "Grep" })
