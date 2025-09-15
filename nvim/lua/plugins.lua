@@ -1,9 +1,8 @@
 vim.pack.add({
 	"https://github.com/kvgamedev/kvim.nvim",
 })
-require("kvim.plug").setup()
 
-local P = KPlug
+local P = require("kvim.plug")
 local map = vim.keymap.set
 
 P.add({
