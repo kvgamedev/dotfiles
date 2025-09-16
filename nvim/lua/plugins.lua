@@ -6,7 +6,7 @@ local P = require("kvim.plug")
 local map = vim.keymap.set
 
 P.add({
-	src = "nvim-mini/mini.nvim",
+	"nvim-mini/mini.nvim",
 	lazy = true,
 	config = function()
 		require("mini.files").setup()
@@ -49,7 +49,7 @@ P.add({
 })
 
 P.add({
-	src = "folke/flash.nvim",
+	"folke/flash.nvim",
 	lazy = true,
 	config = function()
 		map({ "n", "x", "o" }, "<return>", require("flash").jump, { desc = "Flash" })
@@ -58,7 +58,7 @@ P.add({
 })
 
 P.add({
-	src = "neovim/nvim-lspconfig",
+	"neovim/nvim-lspconfig",
 	lazy = true,
 	config = function()
 		vim.lsp.config("lua_ls", {
@@ -80,7 +80,7 @@ P.add({
 })
 
 P.add({
-	src = "Saghen/blink.cmp",
+	"Saghen/blink.cmp",
 	version = vim.version.range("*"),
 	lazy = true,
 	event = "InsertEnter",
@@ -94,7 +94,7 @@ P.add({
 })
 
 P.add({
-	src = "nvim-treesitter/nvim-treesitter",
+	"nvim-treesitter/nvim-treesitter",
 	lazy = true,
 	config = function()
 		---@diagnostic disable: missing-fields
@@ -106,7 +106,7 @@ P.add({
 })
 
 P.add({
-	src = "stevearc/conform.nvim",
+	"stevearc/conform.nvim",
 	lazy = true,
 	config = function()
 		require("conform").setup({
@@ -121,32 +121,17 @@ P.add({
 })
 
 P.add({
-	{
-		src = "catppuccin/nvim",
-		name = "catppuccin",
-		config = function()
-			vim.cmd("colorscheme catppuccin")
-		end,
-	},
-	{
-		src = "ellisonleao/gruvbox.nvim",
-		config = function()
-			require("gruvbox").setup({
-				contrast = "",
-			})
-			vim.cmd("colorscheme gruvbox")
-		end,
-	},
-	{
-		src = "rebelot/kanagawa.nvim",
-		config = function()
-			vim.cmd("colorscheme kanagawa")
-		end,
-	},
+	{ "catppuccin/nvim", name = "catppuccin" },
+	"ellisonleao/gruvbox.nvim",
+	"rebelot/kanagawa.nvim",
+	"navarasu/onedark.nvim",
+	config = function()
+		vim.cmd("colorscheme onedark")
+	end,
 })
 
 P.add({
-	src = "kvgamedev/kvim.nvim",
+	"kvgamedev/kvim.nvim",
 	lazy = true,
 	config = function()
 		require("kvim.term").setup()
