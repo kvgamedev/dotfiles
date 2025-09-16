@@ -4,7 +4,6 @@ if status is-interactive
 	alias ls 'eza --icons auto'
 	alias cd 'z'
 	alias cf 'cd (fzf --walker=dir,hidden)'
-	alias vim 'nvim'
 	alias v 'nvim'
 	alias vi 'nvim (fzf)'
 	alias vo 'set file (fzf) && cd (dirname $file) && nvim (basename $file)'
