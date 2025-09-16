@@ -6,6 +6,15 @@ local P = require("kvim.plug")
 local map = vim.keymap.set
 
 P.add({
+	"nvim-lualine/lualine.nvim",
+	lazy = true,
+	config = function()
+		---@diagnostic disable-next-line
+		require("lualine").setup()
+	end,
+})
+
+P.add({
 	"nvim-mini/mini.nvim",
 	lazy = true,
 	config = function()
