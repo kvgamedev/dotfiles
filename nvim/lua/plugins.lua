@@ -121,11 +121,28 @@ P.add({
 })
 
 P.add({
-	src = "catppuccin/nvim",
-	name = "catppuccin",
-	config = function()
-		vim.cmd("colorscheme catppuccin")
-	end,
+	{
+		src = "catppuccin/nvim",
+		name = "catppuccin",
+		config = function()
+			vim.cmd("colorscheme catppuccin")
+		end,
+	},
+	{
+		src = "ellisonleao/gruvbox.nvim",
+		config = function()
+			require("gruvbox").setup({
+				contrast = "",
+			})
+			vim.cmd("colorscheme gruvbox")
+		end,
+	},
+	{
+		src = "rebelot/kanagawa.nvim",
+		config = function()
+			vim.cmd("colorscheme kanagawa")
+		end,
+	},
 })
 
 P.add({
