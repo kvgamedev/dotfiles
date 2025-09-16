@@ -126,7 +126,7 @@ P.add({
 	"rebelot/kanagawa.nvim",
 	"navarasu/onedark.nvim",
 	config = function()
-		vim.cmd("colorscheme onedark")
+		vim.cmd("colorscheme catppuccin")
 	end,
 })
 

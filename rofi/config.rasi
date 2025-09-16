@@ -13,12 +13,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "NotoSansM Nerd Font 10";
-    background:                  #121318;
-    background-alt:              #38393e;
-    foreground:                  #e2e2e9;
-    selected:                    #2d4578;
-    active:                      #404759;
-    urgent:                      #593e5a;
+    background:                  #101418;
+    background-alt:              #36393e;
+    foreground:                  #e0e2e8;
+    selected:                    #0f4a73;
+    active:                      #3a4857;
+    urgent:                      #504061;
 }
 
 /*****----- Main Window -----*****/
@@ -52,7 +52,7 @@ imagebox {
     padding:                     20px;
     background-color:            transparent;
     border-radius:               10px;
-    background-image:            url("/home/kv/Wallpapers/sung-jinwoo-dragon-3840x2160-15351.jpg", height);
+    background-image:            url("/home/kv/Wallpapers/your-name-shooting-3840x2160-14938.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

@@ -3,7 +3,7 @@ custom-shader = shaders/cursor_smear.glsl
 font-size = 13
 font-family = NotoSansM Nerd Font Propo
 cursor-invert-fg-bg = true
-theme = Kanagawa Wave
+theme = catppuccin-mocha
 adjust-cursor-thickness = 500%
 adjust-underline-thickness = 200%
 
