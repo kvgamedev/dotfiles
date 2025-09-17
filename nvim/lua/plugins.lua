@@ -22,6 +22,7 @@ P.add({
 		require("mini.icons").setup()
 		MiniIcons.mock_nvim_web_devicons()
 		require("mini.pick").setup()
+		require("mini.tabline").setup()
 		vim.ui.select = MiniPick.ui_select
 		require("mini.ai").setup()
 		require("mini.align").setup()
@@ -54,6 +55,15 @@ P.add({
 		map("n", "<leader>sc", MiniExtra.pickers.commands, { desc = "Commands" })
 		map("n", "<leader>sh", MiniExtra.pickers.history, { desc = "Command History" })
 		map("n", "<leader>sk", MiniExtra.pickers.keymaps, { desc = "Keymaps" })
+	end,
+})
+
+P.add({
+	"folke/noice.nvim",
+	lazy = true,
+	dependencies = { "MunifTanjim/nui.nvim" },
+	config = function()
+		require("noice").setup()
 	end,
 })
 
@@ -131,11 +141,16 @@ P.add({
 
 P.add({
 	{ "catppuccin/nvim", name = "catppuccin" },
-	"ellisonleao/gruvbox.nvim",
+	{
+		"ellisonleao/gruvbox.nvim",
+		config = function()
+			require("gruvbox").setup({ bold = false, inverse = false, transparent_mode = true })
+		end,
+	},
 	"rebelot/kanagawa.nvim",
 	"navarasu/onedark.nvim",
 	config = function()
-		vim.cmd("colorscheme catppuccin")
+		vim.cmd("colorscheme gruvbox")
 	end,
 })
 
