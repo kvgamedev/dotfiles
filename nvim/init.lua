@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
-vim.g.localmapleader = " "
 
-require("options")
-require("keymaps")
 require("autocommands")
+require("keymaps")
+require("options")
 require("plugins")
