@@ -13,12 +13,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "NotoSansM Nerd Font 10";
-    background:                  #101418;
-    background-alt:              #36393e;
-    foreground:                  #e0e2e8;
-    selected:                    #0f4a73;
-    active:                      #3a4857;
-    urgent:                      #504061;
+    background:                  #151218;
+    background-alt:              #3b383e;
+    foreground:                  #e7e0e8;
+    selected:                    #513c74;
+    active:                      #4b4357;
+    urgent:                      #643b45;
 }
 
 /*****----- Main Window -----*****/
@@ -52,7 +52,7 @@ imagebox {
     padding:                     20px;
     background-color:            transparent;
     border-radius:               10px;
-    background-image:            url("/home/kv/Wallpapers/your-name-shooting-3840x2160-14938.jpg", height);
+    background-image:            url("/home/kv/Wallpapers/lake-mountains-rocks-twilight-sunset-starry-sky-purple-sky-3840x2160-3768.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
