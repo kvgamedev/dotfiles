@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 
+require("options")
 require("autocommands")
 require("keymaps")
-require("options")
-require("plugins")
+require("startup")
+vim.defer_fn(function()
+	require("lazyload")
+end, 0)
