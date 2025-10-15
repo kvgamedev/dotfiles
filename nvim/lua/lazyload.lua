@@ -35,7 +35,10 @@ require("mini.tabline").setup()
 
 require("gitsigns").setup()
 require("which-key").setup({ preset = "helix", delay = 300 })
-require("which-key").add({ { "<leader>w", proxy = "<c-w>", desc = "Windows" }, { "gl", proxy = "gr", desc = "LSP" } })
+require("which-key").add({
+	{ "<leader>w", proxy = "<c-w>", desc = "Windows" },
+	{ "gl", proxy = "gr", desc = "LSP" },
+})
 require("todo-comments").setup()
 require("noice").setup()
 require("lualine").setup({
@@ -120,3 +123,4 @@ local lazygit = term:new({ cmd = "lazygit", hidden = true, direction = "float", 
 --stylua: ignore start
 map({ "n", "t" }, "<c-t>", vim.cmd.ToggleTerm)
 map("n", "<c-g>", function() lazygit:toggle() end)
+--stylua: ignore stop
